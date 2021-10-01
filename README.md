@@ -1,7 +1,7 @@
 
 # E-Commerce Web App
 
-We have create E-Commerce [Website](https://tigerteameshop.netlify.app/) using React .
+We have create E-Commerce [Website](ecomshope.netlify.app) using React .
 
 
 ## Run Locally
@@ -9,7 +9,7 @@ We have create E-Commerce [Website](https://tigerteameshop.netlify.app/) using R
 Clone the project
 
 ```bash
-  git clone https://github.com/Tiger-Team-01/ECom-Web-App-.git
+  git clone https://github.com/Sugam50/ECOM-Web-App.git
 ```
 
 Go to the project directory
