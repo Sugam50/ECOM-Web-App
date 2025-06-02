@@ -46,12 +46,12 @@ function ProductDetails({ setDrawer }) {
 			</Link>
 			<div className='col-6 d-flex imageContainer '>
 				<div className='prodimage d-flex justify-content-center align-items-center'>
-					<img src={item.Images ? item.Images[0].url : null} alt='' />
+					<img src={item['Product Image'] ? item['Product Image'][0].url : null} alt='' />
 				</div>
 			</div>
 			<div className=' col-6  d-flex flex-column prodDetailsDescription'>
 				<div className='title p-2 detail d-flex  align-items-center overflow-hidden'>
-					<h4 className='text-capitalize fw-bold'> {item.title}</h4>
+					<h4 className='text-capitalize fw-bold'> {item['Product Name']}</h4>
 				</div>
 				<div className=' p-2 detail2 d-flex flex-column '>
 					<div className='qty'>
@@ -66,7 +66,7 @@ function ProductDetails({ setDrawer }) {
 							</div>
 						</div>
 					</div>
-					<div className='pr'>Price : ₹{item.price}</div>
+					<div className='pr'>Price : ₹{item.Price}</div>
 					<div className='buy'>
 						<Button
 							variant='dark'

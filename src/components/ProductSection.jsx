@@ -63,7 +63,7 @@ const ProductSection = ({ products }) => {
 					>
 						{products.forEach((element) => {
 							// eslint-disable-next-line
-							if (element.fields.Categories == "Fashion")
+							if (element.fields.Category == "Fashion")
 								Fashion.push(element);
 						})}
 						{Fashion.length > 0
@@ -95,7 +95,7 @@ const ProductSection = ({ products }) => {
 					>
 						{products.forEach((element) => {
 							// eslint-disable-next-line
-							if (element.fields.Categories == "Electronics")
+							if (element.fields.Category == "Electronics")
 								Electronics.push(element);
 						})}
 						{Electronics.length > 0
@@ -127,7 +127,7 @@ const ProductSection = ({ products }) => {
 					>
 						{products.forEach((element) => {
 							// eslint-disable-next-line
-							if (element.fields.Categories == "Kids")
+							if (element.fields.Category == "Kids")
 								kids.push(element);
 						})}
 						{kids.length > 0
@@ -159,7 +159,7 @@ const ProductSection = ({ products }) => {
 					>
 						{products.forEach((element) => {
 							// eslint-disable-next-line
-							if (element.fields.Categories == "Appliances")
+							if (element.fields.Category == "Appliances")
 								Appliances.push(element);
 						})}
 						{Appliances.length > 0
@@ -192,7 +192,7 @@ const ProductSection = ({ products }) => {
 					>
 						{products.forEach((element) => {
 							// eslint-disable-next-line
-							if (element.fields.Categories == "Mobile")
+							if (element.fields.Category == "Mobile")
 								Mobile.push(element);
 						})}
 						{Mobile.length > 0

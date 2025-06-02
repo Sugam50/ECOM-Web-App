@@ -17,14 +17,14 @@ const ProductCard = ({ prod }) => {
 		>
 			<div className='product-card'>
 				<div style={{ height: "275px" }}>
-					<img src={prod.fields.Images[0].url} alt='' />
+					<img src={prod.fields['Product Image'][0].url} alt='' />
 				</div>
 
 				<div className='content'>
-					<h2 className='title'>{prod.fields.title}</h2>
+					<h2 className='title'>{prod.fields['Product Name']}</h2>
 					<div className='price'>
-						<h3>₹ {prod.fields.price}</h3>
-						<div>₹ {prod.fields.price * parseInt(2)}</div>
+						<h3>₹ {prod.fields.Price}</h3>
+						<div>₹ {prod.fields.Price * parseInt(2)}</div>
 					</div>
 					<RatingStar />
 				</div>

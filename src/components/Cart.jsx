@@ -74,24 +74,24 @@ function Cart({ drawer, setdrawer }) {
                       >
                         <img
                           src={
-                            item.item.Images ? item.item.Images[0].url : null
+                            item.item['Product Image'] ? item.item['Product Image'][0].url : null
                           }
                           style={{ width: "100%", height: "100%" }}
                           alt=""
                         />
                       </div>
-                      <div className="ProductTitleCart">{item.item.title}</div>
+                      <div className="ProductTitleCart">{item.item['Product Name']}</div>
                     </div>
                     <div className=" d-flex justify-content-center align-items-center col-2 ">
                       {" "}
                       {item.qty}{" "}
                     </div>
                     <div className=" d-flex justify-content-center align-items-center col-2 ">
-                      ₹ {item.item.price}{" "}
+                      ₹ {item.item.Price}{" "}
                     </div>
                     <div className=" d-flex justify-content-center align-items-center col-2   ">
                       {" "}
-                      ₹ {item.item.price * item.qty}
+                      ₹ {item.item.Price * item.qty}
                     </div>
                     <div className="  d-flex justify-content-center align-items-center col-1  ">
                       <div

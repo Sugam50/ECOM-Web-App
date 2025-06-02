@@ -15,7 +15,7 @@ function Payments({ cartItems }) {
     if(cartItems.length>0){
       cartItems.forEach(element => {
         // eslint-disable-next-line
-        z=z+(element.item.price*parseInt(element.qty))
+        z=z+(element.item.Price*parseInt(element.qty))
        setnetPrice(z)
       });
     }
@@ -31,13 +31,13 @@ function Payments({ cartItems }) {
               className="p-3 m-3 d-flex flex-row position-relative paymentPage"
             >
               <img
-                src={item.item.Images? item.item.Images[0].url:null}
+                src={item.item['Product Image']? item.item['Product Image'][0].url:null}
                 style={{ width: "5rem", height: "5rem" }}
                 alt=""
               />
               <div className="px-3 d-flex flex-column">
-                <h5 className="fw-bold">{item.item.title}</h5>
-               <em><p>₹{item.item.price*parseInt(item.qty)}</p></em>
+                <h5 className="fw-bold">{item.item['Product Name']}</h5>
+               <em><p>₹{item.item.Price*parseInt(item.qty)}</p></em>
               </div>
 
               <button

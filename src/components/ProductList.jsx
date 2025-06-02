@@ -12,9 +12,9 @@ function ProductList() {
       <div className="List">
         {products.map((item, index) => (
           <Link
-            key={index}
-            to={"/details/" + item.id}
-            style={{ color: "inherit", textDecoration: "none" }}
+          key={index}
+          to={"/details/" + item.id}
+          style={{ color: "inherit", textDecoration: "none" }}
           >
             <div
               className="card text-left border border-2 p-3 m-2 overflow-hidden"
@@ -27,15 +27,15 @@ function ProductList() {
               <img
                 style={{ width: "22rem", height: "15rem" }}
                 className="card-img-top"
-                src={item.fields.Images[0].url}
+                src={item.fields['Product Image'][0].url}
                 alt=""
               />
               <div
                 className="card-body"
                 style={{ width: "22rem", height: "10rem" }}
               >
-                <h4 className="card-title">{item.fields.title}</h4>
-                <p className="card-text">{item.fields.description}</p>
+                <h4 className="card-title">{item.fields['Product Name']}</h4>
+                <p className="card-text">{item.fields.Description}</p>
               </div>
             </div>
           </Link>
