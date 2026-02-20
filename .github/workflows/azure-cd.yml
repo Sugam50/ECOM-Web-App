@@ -158,6 +158,3 @@ jobs:
           app-name: ${{ secrets.AZURE_WEBAPP_NAME }}
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
           images: docker.io/sugam50/sugamhub:v${{ needs.build.outputs.version }}
-
-          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-          images: 'docker.io/sugam50/sugamhub:sha-${{ github.sha }}'
