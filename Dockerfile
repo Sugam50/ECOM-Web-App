@@ -1,22 +1,20 @@
-# Use Node 16
-FROM node:16-alpine
+# ---------- Build stage ----------
+FROM node:16-alpine AS build
 
-# Set working directory
 WORKDIR /app
 
-# Copy dependency files first (better caching)
 COPY package*.json ./
-
-# Install dependencies
 RUN npm install
 
-# Copy project files
 COPY . .
+RUN npm run build
 
-# React default port
-EXPOSE 3000
 
-ENV NODE_OPTIONS=--openssl-legacy-provider
+# ---------- Production stage ----------
+FROM nginx:alpine
 
-# Start app
-CMD ["npm", "start"]
+COPY --from=build /app/build /usr/share/nginx/html
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
